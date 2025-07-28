@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Kő–Papír–Olló Django</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+        button { padding: 10px 20px; margin: 10px; font-size: 18px; }
+        .result, .stats { margin-top: 30px; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Kő – Papír – Olló</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button name="choice" value="kő">🪨 Kő</button>
+        <button name="choice" value="papír">📄 Papír</button>
+        <button name="choice" value="olló">✂️ Olló</button>
+    </form>
+
+    {% if player_choice %}
+        <div class="result">
+            <p>Te választottad: <strong>{{ player_choice }}</strong></p>
+            <p>Gép választása: <strong>{{ computer_choice }}</strong></p>
+            <p>Eredmény: <strong>{{ result }}</strong></p>
+        </div>
+    {% endif %}
+
+    <div class="stats">
+        <p>Győzelmek: {{ stats.win }}</p>
+        <p>Vereségek: {{ stats.lose }}</p>
+        <p>Döntetlenek: {{ stats.draw }}</p>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        <button name="reset" value="1">🔄 Új játék (statisztika törlése)</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 15px 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+}
+
+.buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+#scoreboard {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+#resetBtn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+#resetBtn:hover {
+  background-color: #ddd;
+}
+
+/* 📱 Reszponzív stílus mobilra */
+@media (max-width: 480px) {
+  .buttons button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #resetBtn {
+    width: 100%;
+    max-width: 200px;
+  }
+}

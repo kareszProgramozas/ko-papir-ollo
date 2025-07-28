@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Kő, Papír, Olló</h1>
+
+  <div class="counters">
+    <p>✅ Győzelmek: {{ winCount }}</p>
+    <p>❌ Vereségek: {{ loseCount }}</p>
+    <p>➖ Döntetlenek: {{ drawCount }}</p>
+  </div>
+
+  <div class="choices">
+    <button *ngFor="let choice of choices" (click)="play(choice)">
+      {{ choice }}
+    </button>
+  </div>
+
+  <div *ngIf="userChoice" class="results">
+    <p>Te: {{ userChoice }}</p>
+    <p>Számítógép: {{ computerChoice }}</p>
+    <h2>{{ result }}</h2>
+  </div>
+
+  <button class="reset" (click)="reset()">🔄 Új játék</button>
+</div>

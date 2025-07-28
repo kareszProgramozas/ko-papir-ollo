@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Kő – Papír – Olló</title>
+</head>
+<body>
+  <h1>Kő – Papír – Olló</h1>
+
+  <form method="post">
+    <button type="submit" name="choice" value="Kő">🪨 Kő</button>
+    <button type="submit" name="choice" value="Papír">📄 Papír</button>
+    <button type="submit" name="choice" value="Olló">✂️ Olló</button>
+  </form>
+
+  <h2>{{ result }}</h2>
+
+  <p>
+    Nyerés: {{ wins }}<br>
+    Vesztés: {{ losses }}<br>
+    Döntetlen: {{ draws }}
+  </p>
+
+  <form method="post">
+    <button type="submit" name="reset" value="1">🔁 Új játék</button>
+  </form>
+</body>
+</html>
